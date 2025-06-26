@@ -7,7 +7,6 @@ use discord::HumanInDiscord;
 use rust_mcp_sdk::error::{McpSdkError, SdkResult};
 use rust_mcp_sdk::schema::{
     Implementation, InitializeResult, ServerCapabilities, ServerCapabilitiesTools,
-    LATEST_PROTOCOL_VERSION,
 };
 
 use rust_mcp_sdk::{
@@ -54,7 +53,7 @@ async fn main() -> SdkResult<()> {
              and their response will be returned to you."
                 .to_string(),
         ),
-        protocol_version: LATEST_PROTOCOL_VERSION.to_string(),
+        protocol_version: "2025-06-18".to_string(),
     };
 
     let transport = StdioTransport::new(TransportOptions::default())?;
